@@ -1,0 +1,51 @@
+#Navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 1.3rem;
+
+}
+.Navlinks a{
+    margin: 20px;
+}
+.Navicons i{
+   margin: 10px;
+}
+
+#Product-Specs{
+    display: grid;
+    grid-template-columns: 4fr  6fr ;
+    
+    height: 600px;
+    width: 70%;
+    margin: 50px auto;
+}
+
+#right-side-specs{
+
+    padding-left: 20px;
+}
+#productImg{
+    width: 100%;
+    
+}
+.previewImg img{
+    height: 120px;
+}
+.productimage img{
+    display: flex;
+}
+.previewImg {
+    display: flex;
+   
+}
+.previewImg img{
+    margin: 10px;
+ 
+}
+.previewImg img:hover{
+    border: 2px solid lightgreen;
+    cursor: pointer;
+}
+
+

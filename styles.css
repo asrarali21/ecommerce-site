@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+#Navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    font-size: 1.3rem;
+
+}
+.Navlinks a{
+    margin: 20px;
+}
+.Navicons i{
+   margin: 10px;
+}
+#clothescontainer , #Accessories-Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+
+image , img{
+    width: 100%;
+}
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.details h3, .details h4, .details h5 {
+    margin-top: 10px;
+}
+.product-card :hover{
+    cursor: pointer;
+}
