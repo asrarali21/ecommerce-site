@@ -14,7 +14,9 @@ axios.get(`https://5d76bf96515d1a0014085cf9.mockapi.io/product/${prod_id}`).then
     <div class="product-description">
                     <h1 id="name">${res.data.name}</h1>
                     <h4 id="brand">${res.data.brand}</h4>
+                    
                     <h3>Price: Rs <span id="price">${res.data.price}</span></h3>
+                     <button>Add to Cart</button>
                     <div class="description">
                         <h3>Description</h3>
                         <p id="description">${res.data.description}</p>

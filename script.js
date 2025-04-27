@@ -19,7 +19,7 @@ if (item.isAccessory == true) {
                             <h3> ${item.name}
                             </h3>
                            <h4>${item.brand}</h4>
-                           <h5>${item.price}</h5>
+                           <h5> Rs ${item.price}</h5>
                             </div>
                         </div>
      </div>
@@ -34,7 +34,7 @@ if (item.isAccessory == true) {
                             <h3> ${item.name}
                             </h3>
                            <h4>${item.brand}</h4>
-                           <h5>${item.price}</h5>
+                           <h5> Rs ${item.price}</h5>
                             </div>
                         </div>
      </div>

@@ -4,15 +4,64 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
+body {
+    background-color: #f9f9f9; 
+    color: #333333;
+    line-height: 1.6;
+}
+html {
+    scroll-behavior: smooth;
+}
 #Navbar{
     display: flex;
     justify-content: space-around;
-    padding: 10px;
-    font-size: 1.3rem;
-
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+#Navbar .navName  a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+#Navbar .navName a:hover {
+    color: #ffe6f0;
+}
+.Navlinks a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Navlinks a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffe6f0;
+}
+
 .Navlinks a{
     margin: 20px;
+}
+.Navicons i {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.Navicons i:hover {
+    transform: scale(1.2);
+    color: #ffe6f0;
 }
 .Navicons i{
    margin: 10px;
@@ -21,6 +70,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin-bottom: 10px;
+}
+#clothingsection, #AccessoriesSection {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+#clothingsection h2, #AccessoriesSection h2 {
+    font-size: 2rem;
+    color: #ff758c; 
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -34,6 +97,7 @@ image , img{
     text-align: center;
 }
 
+
 .product-card img {
     width: 100%;
     height: auto;
@@ -41,7 +105,99 @@ image , img{
 
 .details h3, .details h4, .details h5 {
     margin-top: 10px;
+    color: #333333;
+}
+.details h5 {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: bold; 
 }
 .product-card :hover{
     cursor: pointer;
+}
+#Section-Image{
+   
+    width: 90vw;
+    margin: 100px auto 50px;
+    text-align: center;
+}
+#Section-Image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #ffe6f0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(90deg, #ff758c, #ff7eb3); /* Gradient background */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow above the footer */
+    margin-top: 50px;
+}
+
+/* Content Wrapper */
+#content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Text Content in Footer */
+.Text-Content {
+    text-align: left;
+}
+
+.Text-Content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffe6f0; /* Light pink for headings */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Text-Content a {
+    display: block;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.Text-Content a:hover {
+    color: #ffe6f0; /* Light pink on hover */
+    transform: translateX(5px); /* Slight movement on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    .Text-Content {
+        text-align: center;
+    }
 }
