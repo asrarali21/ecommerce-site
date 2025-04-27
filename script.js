@@ -44,7 +44,7 @@ if (item.isAccessory == true) {
 })
 
 function handleClick(id) {
-    location.assign(`http://127.0.0.1:3000/Shoplane-Site/Productspec.html?prod_id=${id}`)
+    location.assign(`http://127.0.0.1:3000/Shopfinity-Site/Productspec.html?prod_id=${id}`)
 }
    
 
