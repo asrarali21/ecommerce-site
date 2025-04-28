@@ -5,12 +5,8 @@
     font-family: "Montserrat", sans-serif;
 }
 body {
-    background-color: #f9f9f9; 
-    color: #333333;
-    line-height: 1.6;
-}
-html {
-    scroll-behavior: smooth;
+    background-color: #f9f9f9;
+    color: #333333; 
 }
 #Navbar{
     display: flex;
@@ -66,30 +62,26 @@ html {
 .Navicons i{
    margin: 10px;
 }
-#clothescontainer , #Accessories-Container {
+#cart-section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     margin-bottom: 10px;
 }
-#clothingsection, #AccessoriesSection {
-    margin: 50px auto;
+#cart-section {
+    margin: 70px  auto;
     padding: 20px;
     background-color: white; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 90%;
 }
-#clothingsection h2, #AccessoriesSection h2 {
+#cart-section h2{
     font-size: 2rem;
     color: #ff758c; 
     margin-bottom: 20px;
     text-align: center;
 }
 
-
-image , img{
-    width: 100%;
-}
 .product-card {
     border: 1px solid #ccc;
     padding: 10px;
@@ -115,17 +107,6 @@ image , img{
 .product-card :hover{
     cursor: pointer;
 }
-#Section-Image{
-   
-    width: 90vw;
-    margin: 100px auto 50px;
-    text-align: center;
-}
-#Section-Image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 .product-card {
     border: 1px solid #ccc;
     padding: 15px;
@@ -144,132 +125,108 @@ image , img{
     height: auto;
     border-radius: 8px;
 }
-
-
-footer {
-    background: linear-gradient(90deg, #ff758c, #ff7eb3); 
+button {
+    background-color: #ff758c; 
     color: white;
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); 
-    margin-top: 50px;
-}
-
-
-#content-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-.Text-Content {
-    text-align: left;
-}
-
-.Text-Content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #ffe6f0; 
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.Text-Content a {
-    display: block;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 1rem;
-    color: white;
-    text-decoration: none;
-    margin-bottom: 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.Text-Content a:hover {
-    color: #ffe6f0; 
-    transform: translateX(5px); 
+button:hover {
+    background-color: #ff4d6d; 
+}
+#Total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#pricevalue {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745;
+}
 @media (max-width: 768px) {
-    footer {
-        text-align: center;
-    }
-
-    .Text-Content {
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
-    #clothingsection h2 {
-        font-size: 1.5rem;
-    }
-
-    #clothescontainer {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    #cart-section {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
+    }
+
+    .cart-item h3 {
+        font-size: 1rem;
+    }
+
+    .cart-item p {
+        font-size: 0.9rem;
+    }
+
+    .cart-item .price {
+        font-size: 1rem;
     }
 }
 
 
 @media (max-width: 480px) {
-    #clothingsection h2 {
-        font-size: 1.2rem;
-    }
-
-    #clothescontainer {
+    #cart-section {
         grid-template-columns: 1fr;
         gap: 10px;
     }
 }
-@media (max-width: 768px) {
-    #AccessoriesSection h2 {
-        font-size: 1.5rem;
-    }
 
-    #Accessories-Container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    #AccessoriesSection h2 {
-        font-size: 1.2rem;
-    }
-
-    #Accessories-Container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-}
-@media (max-width: 768px) {
-    .product-card {
-        max-width: 200px;
-    }
-
-    .product-card .details h3 {
+    .cart-item h3,
+    .cart-item p,
+    .cart-item .price {
         font-size: 0.9rem;
     }
-
-    .product-card .details h4 {
-        font-size: 0.8rem;
+    @media (max-width: 768px) {
+        #Navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px 20px;
+        }
+    
+        .Navlinks {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+    
+        .Navlinks a {
+            font-size: 1rem;
+            text-align: left;
+            padding: 10px;
+            width: 100%;
+        }
+    
+        .Navicons {
+            margin-top: 10px;
+            justify-content: flex-start;
+            width: 100%;
+        }
     }
+    
 
-    .product-card .details h5 {
-        font-size: 0.9rem;
+    @media (max-width: 480px) {
+        #Navbar .navName a {
+            font-size: 1.5rem;
+        }
+    
+        .Navlinks a {
+            font-size: 0.9rem;
+        }
+    
+        .Navicons i {
+            font-size: 1.2rem;
+        }
     }
-}
-
-@media (max-width: 480px) {
-    .product-card {
-        max-width: 100%;
-    }
-
-    .product-card .details h3,
-    .product-card .details h4,
-    .product-card .details h5 {
-        font-size: 0.8rem;
-    }
-}
