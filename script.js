@@ -3,12 +3,12 @@ let AccessoriesContainer = document.getElementById("Accessories-Container")
 let cartcount =document.getElementById("cartcount")
 
 function GetitemsfromLC() {
-    let CartitemsFromLC = JSON.parse( localStorage.getItem("cartItems"))
-    return CartitemsFromLC
- }
- let count = GetitemsfromLC().length
- cartcount.innerText = count
+    let CartitemsFromLC = JSON.parse(localStorage.getItem("cartItems")) || [];
+    return CartitemsFromLC;
+}
 
+let count = GetitemsfromLC().length;
+cartcount.innerText = count;
 
 axios.get ("https://5d76bf96515d1a0014085cf9.mockapi.io/product")
 .then((res)=>{
