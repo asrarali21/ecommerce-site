@@ -172,4 +172,33 @@ button {
 button:hover {
     background-color: #ff4d6d; 
 }
+@media (max-width: 768px) {
+    #Product-Specs {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    #left-side-specs,
+    #right-side-specs {
+        max-width: 100%;
+    }
+
+    #right-side-specs {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 480px) {
+    #right-side-specs h1 {
+        font-size: 1.5rem;
+    }
+
+    #right-side-specs h4,
+    #right-side-specs h3 {
+        font-size: 1rem;
+    }
+
+    #right-side-specs button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
